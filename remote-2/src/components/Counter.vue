@@ -10,7 +10,7 @@ const { count } = storeToRefs(store);
     style="
       border: 0 solid #e2e8f0;
       margin-top: 10px;
-      background-color: red;
+      background-color: rgb(246, 179, 82);
       border-radius: 0.25rem;
       font-weight: 700;
       padding: 0.5rem 1rem 0.5rem 1rem;

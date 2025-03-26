@@ -35,6 +35,13 @@ export default defineConfig(async ({ command }) => ({
           entryGlobalName: "remote",
           shareScope: "default",
         },
+        "remote-2": {
+          type: "module",
+          name: "remote-2",
+          entry: "http://localhost:4175/remoteEntry.js",
+          entryGlobalName: "remote-2",
+          shareScope: "default",
+        },
       },
       exposes: {},
       filename: "remoteEntry.js",

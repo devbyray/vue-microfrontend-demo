@@ -5,6 +5,10 @@ const RemoteMFE = defineAsyncComponent(
   // @ts-ignore
   () => import("remote/remote-app"),
 );
+const RemoteMFE2 = defineAsyncComponent(
+  // @ts-ignore
+  () => import("remote-2/remote-app"),
+);
 </script>
 
 <template>
@@ -32,21 +36,26 @@ const RemoteMFE = defineAsyncComponent(
       <div class="title">I'm the host app</div>
       <Counter />
     </div>
+    <RemoteMFE v-if="!!RemoteMFE" />
+    <RemoteMFE2 v-if="!!RemoteMFE2" />
   </div>
-  <RemoteMFE v-if="!!RemoteMFE" />
 </template>
 
 <style scoped>
+.host {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 100%;
+}
 .host .card {
   background: #3178c6;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
   border-radius: 5px;
   margin: 20px 20px 20px 20px;
-  width: 250px;
   padding: 20px;
   text-align: center;
   color: white;
-  float: left;
 }
 
 .host .title {
